@@ -1,0 +1,3 @@
+etc/default/grub.d/70_kumkang-theme.cfg
+boot/grub/themes/kumkang
+boot/grub/fonts/D2Coding16.pf2

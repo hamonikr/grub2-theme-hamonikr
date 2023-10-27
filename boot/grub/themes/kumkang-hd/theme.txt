@@ -1,0 +1,55 @@
+desktop-image: "background.jpg"
+
+title-text: ""
+
+terminal-box: "terminal_box_*.png"
+terminal-font: "Terminus (TTF) Regular 32"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
++ boot_menu {
+  left = 33%
+  width = 50%
+  top = 25%
+  height = 50%	
+
+  item_font = "D2Coding Regular 32"
+  item_color = "#bbbbbb"
+  item_height = 64
+  item_icon_space = 12 
+  item_spacing = 4
+
+  selected_item_font = "D2Coding Regular 32"
+  selected_item_color= "#ffffff"
+  selected_item_pixmap_style = "select_*.png"
+
+  icon_height = 52
+  icon_width = 52
+
+  scrollbar = true
+  scrollbar_width = 40
+  scrollbar_thumb = "slider_*.png"
+}
+
++ vbox {
+ left = 33%+64
+ top = 81%
+ width = 50%-64
+ + label { text = "Controls" color = "#bbbbbb" font = "D2Coding Regular 32" }
+ + label { text = "- 'E'를 누르면 선택한 메뉴를 편집합니다. " color = "#bbbbbb" font = "D2Coding Regular 32" }
+ + label { text = "- 'C'를 누르면 GRUB 명령행에서 다양한 작업을 할 수 있습니다. " color = "#bbbbbb" font = "D2Coding Regular 32" }
+ + label { text = "" color = "#bbbbbb" font = "D2Coding Regular 32" }
+ }
++ label {  
+ left = 0% 
+ top =91%
+ width = 100% 
+ align = "center"
+ id = "__timeout__" 
+ text = "Booting in %d seconds."
+ color = "#bbbbbb"
+ font = "D2Coding Regular 16"
+}

@@ -1,0 +1,6 @@
+grub2-theme-kumkang (1.0.0) stable; urgency=medium
+
+  * Add HD version
+   - Update meta package for HD
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 27 Oct 2023 21:42:33 +0900

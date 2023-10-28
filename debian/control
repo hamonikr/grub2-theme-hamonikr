@@ -13,6 +13,14 @@ Replaces:
 Description: Grub2 Theme for HamoniKR
  하모니카 리눅스의 부트로더용 테마
 
+Package: grub2-theme-kumkang-dark
+Architecture: all
+Pre-Depends: 
+Depends: 
+Replaces:          
+Description: Grub2 Theme for HamoniKR
+ 하모니카 리눅스의 부트로더용 테마
+
 Package: grub2-theme-kumkang-hd
 Architecture: all
 Pre-Depends: 
@@ -20,3 +28,12 @@ Depends:
 Replaces:      
 Description: Grub2 Theme for HamoniKR
  하모니카 리눅스의 부트로더용 테마
+
+Package: grub2-theme-kumkang-hd-dark
+Architecture: all
+Pre-Depends: 
+Depends: 
+Replaces:      
+Description: Grub2 Theme for HamoniKR
+ 하모니카 리눅스의 부트로더용 테마
+

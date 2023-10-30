@@ -6,7 +6,7 @@ case "$1" in
     configure)
     if which update-grub2 > /dev/null 2>&1
     then
-        update-grub2 || echo "Could not update grub, skipping."
+        LC_ALL=C update-grub2 || echo "Could not update grub, skipping."
     fi
     ;;
 

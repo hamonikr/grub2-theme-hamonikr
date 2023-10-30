@@ -1,3 +1,2 @@
 etc/default/grub.d/71_kumkang-theme-hd-dark.cfg
 boot/grub/themes/kumkang-hd-dark
-boot/grub/fonts/D2Coding32.pf2

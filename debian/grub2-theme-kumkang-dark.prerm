@@ -10,7 +10,7 @@ case "$1" in
         rm -f /etc/default/grub.d/70_kumkang-theme-dark.cfg
         if which update-grub2 > /dev/null 2>&1
         then
-            update-grub2 || echo "Could not update grub, skipping."
+            LC_ALL=C update-grub2 || echo "Could not update grub, skipping."
         fi
         ;;
 esac

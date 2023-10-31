@@ -1,3 +1,9 @@
+grub2-theme-kumkang (1.0.6) stable; urgency=medium
+
+  * Adjust line height
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 31 Oct 2023 17:23:03 +0900
+
 grub2-theme-kumkang (1.0.5) stable; urgency=medium
 
   * Fixed os-probe error with ko locale

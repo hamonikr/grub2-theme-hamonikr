@@ -18,7 +18,7 @@ terminal-border: "0"
 
   item_font = "D2Coding Regular 16"
   item_color = "#ffffff"
-  item_height = 64
+  item_height = 44
   item_icon_space = 12 
   item_spacing = 4
 
@@ -26,8 +26,8 @@ terminal-border: "0"
   selected_item_color= "#e67300"
   selected_item_pixmap_style = "select_*.png"
 
-  icon_height = 52
-  icon_width = 52
+  icon_height = 32
+  icon_width = 32
 
   scrollbar = true
   scrollbar_width = 40
@@ -35,7 +35,7 @@ terminal-border: "0"
 }
 
 + vbox {
- left = 25%+64
+ left = 25%+34
  top = 81%
  width = 50%-64
  + label { text = "Controls" color = "#ffffff" font = "D2Coding Regular 16" }

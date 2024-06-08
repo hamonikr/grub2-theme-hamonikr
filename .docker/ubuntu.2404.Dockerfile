@@ -6,7 +6,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 
  # 패키지 빌드를 위한 필요한 도구 설치
 RUN apt-get update && \
-apt-get install -y build-essential devscripts
+apt-get install -y build-essential devscripts debhelper
 
 # 작업 디렉토리 설정
 WORKDIR /build

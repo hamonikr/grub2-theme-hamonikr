@@ -29,7 +29,7 @@ jobs:
         id: artifact-upload-step
         uses: actions/upload-artifact@v4
         with:
-          if-no-files-found: warn
+          if-no-files-found: error
           name: debian-package
           path: /source/output/*.deb
 

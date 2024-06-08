@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: debian-package
-          path: ${{ github.workspace }}/source/output/*.deb
+          path: /workspace/source/output/*.deb
 
   release:
     runs-on: ubuntu-latest

@@ -20,5 +20,8 @@ RUN mk-build-deps --install --remove --tool 'apt-get -y --no-install-recommends'
 # 패키지 빌드
 RUN debuild -us -uc
 
-# 결과물 확인
-RUN ls /build
+# Move .deb files to a specific directory
+RUN mkdir -p /output && mv ../*.deb /output/
+
+# List the build artifacts
+RUN ls /output

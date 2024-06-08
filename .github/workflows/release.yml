@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: debian-package
-          path: /source/output/*.deb
+          path: /home/runner/work/grub2-theme-hamonikr/grub2-theme-hamonikr/output/*.deb  
 
   release:
     runs-on: ubuntu-latest

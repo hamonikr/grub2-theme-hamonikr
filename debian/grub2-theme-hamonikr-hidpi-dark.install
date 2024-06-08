@@ -1,0 +1,2 @@
+etc/default/grub.d/71_hamonikr-hidpi-dark.cfg
+boot/grub/themes/hamonikr-hidpi-dark

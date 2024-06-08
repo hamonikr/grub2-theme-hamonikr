@@ -7,7 +7,7 @@ case "$1" in
         # Always remove this file when removing the package
         # even if we're not purged. This file would break update-grub2
         # if the package wasn't installed.
-        rm -f /etc/default/grub.d/71_kumkang-theme-hd-dark.cfg
+        rm -f /etc/default/grub.d/70_hamonikr-dark.cfg || echo "Could not remove 70_hamonikr-dark.cfg, skipping."
         if which update-grub2 > /dev/null 2>&1
         then
             LC_ALL=C update-grub2 || echo "Could not update grub, skipping."

@@ -1,0 +1,2 @@
+etc/default/grub.d/71_hamonikr-hidpi.cfg
+boot/grub/themes/hamonikr-hidpi

@@ -1,0 +1,2 @@
+etc/default/grub.d/70_hamonikr-dark.cfg
+boot/grub/themes/hamonikr-dark

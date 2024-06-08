@@ -1,39 +1,39 @@
-Source: grub2-theme-kumkang
+Source: grub2-theme-hamonikr
 Section: utils
 Priority: optional
 Maintainer: Kevin Kim <root@hamonikr.org>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.5
 
-Package: grub2-theme-kumkang
+Package: grub2-theme-hamonikr
 Architecture: all
 Pre-Depends: 
 Depends: 
-Replaces: grub2-theme-kumkang-dark
+Replaces: grub2-theme-hamonikr-dark
 Description: Grub2 Theme for HamoniKR
  하모니카 리눅스의 부트로더용 테마
 
-Package: grub2-theme-kumkang-dark
+Package: grub2-theme-hamonikr-dark
 Architecture: all
 Pre-Depends: 
 Depends: 
-Replaces: grub2-theme-kumkang
+Replaces: grub2-theme-hamonikr
 Description: Grub2 Theme for HamoniKR
  하모니카 리눅스의 부트로더용 테마
 
-Package: grub2-theme-kumkang-hd
+Package: grub2-theme-hamonikr-hidpi
 Architecture: all
 Pre-Depends: 
 Depends: 
-Replaces: grub2-theme-kumkang-hd-dark
+Replaces: grub2-theme-hamonikr-hidpi-dark
 Description: Grub2 Theme for HamoniKR
  하모니카 리눅스의 부트로더용 테마
 
-Package: grub2-theme-kumkang-hd-dark
+Package: grub2-theme-hamonikr-hidpi-dark
 Architecture: all
 Pre-Depends: 
 Depends: 
-Replaces: grub2-theme-kumkang-hd
+Replaces: grub2-theme-hamonikr-hidpi
 Description: Grub2 Theme for HamoniKR
  하모니카 리눅스의 부트로더용 테마
 

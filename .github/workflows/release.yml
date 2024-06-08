@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: debian-package
-          path: /home/runner/work/grub2-theme-hamonikr/grub2-theme-hamonikr/output/*.deb  
+          path: /home/runner/work/grub2-theme-hamonikr/grub2-theme-hamonikr/source/output/*.deb
 
   release:
     runs-on: ubuntu-latest
@@ -43,7 +43,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: debian-package
-          path: ./output
+          path: ./source/output
 
       - name: Create GitHub Release
         id: create_release
@@ -63,6 +63,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./output/*.deb
+          asset_path: ./source/output/*.deb
           asset_name: package.deb
           asset_content_type: application/vnd.debian.binary-package

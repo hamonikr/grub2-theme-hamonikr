@@ -21,7 +21,7 @@ RUN mk-build-deps --install --remove --tool 'apt-get -y --no-install-recommends'
 RUN debuild -us -uc
 
 # Move .deb files to a specific directory
-RUN mkdir -p /output && mv ../*.deb /output/
+RUN mkdir -p /source/output && mv ../*.deb /source/output/
 
 # List the build artifacts
-RUN ls /output
+RUN ls /source/output

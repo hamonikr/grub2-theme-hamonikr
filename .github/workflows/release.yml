@@ -6,10 +6,8 @@ on:
       - "v*"
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
-
     strategy:
       fail-fast: false
       matrix:
@@ -25,23 +23,27 @@ jobs:
       - name: Build Docker image
         run: docker build --file .docker/${{ matrix.dockerfile }} -t debian-package-builder .
 
+      - name: Run Docker container and build
+        run: docker run --name debian-package-builder -v ${{ github.workspace }}:/workspace debian-package-builder
+
       - name: Archive build artifacts
         id: artifact-upload-step
         uses: actions/upload-artifact@v4
         with:
-          if-no-files-found: error
           name: debian-package
-          path: /source/output/*.deb
+          path: /workspace/source/output/*.deb
 
   release:
     needs: build
-    runs-on: ubuntu-latest    
+    runs-on: ubuntu-latest
     steps:
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
-          path: debian-package
-      - run: ls -R debian-package
+          name: debian-package
+          path: ./debian-package
+
+      - run: ls -R ./debian-package
 
       - name: Create GitHub Release
         id: create_release
@@ -56,11 +58,12 @@ jobs:
           prerelease: false
 
       - name: Upload Release Asset
+        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./source/output/*.deb
+          asset_path: ./debian-package/*.deb
           asset_name: package.deb
           asset_content_type: application/vnd.debian.binary-package

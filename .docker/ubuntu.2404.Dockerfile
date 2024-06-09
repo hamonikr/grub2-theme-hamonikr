@@ -1,27 +1,31 @@
+# Use Ubuntu 24.04 as the base image
 FROM ubuntu:24.04 AS builder
 
 RUN export DEBIAN_FRONTEND=noninteractive \
  && apt-get -qq update \
  && apt-get -qq upgrade
 
- # 패키지 빌드를 위한 필요한 도구 설치
-RUN apt-get update && \
-apt-get install -y build-essential devscripts equivs debhelper
+# Install necessary tools and dependencies
+RUN apt-get install --no-install-recommends -y \
+        build-essential \
+        devscripts \
+        equivs \
+        debhelper
 
-# 작업 디렉토리 설정
+# Set the working directory
 WORKDIR /build
 
-# 패키지 소스 복사
+# Copy the source code into the container
 COPY . /build
 
 # Install build dependencies
 RUN mk-build-deps --install --remove --tool 'apt-get -y --no-install-recommends' debian/control
 
-# 패키지 빌드
+# Build the Debian package
 RUN debuild -us -uc
 
 # Move .deb files to a specific directory
-RUN mkdir -p /source/output && mv ../*.deb /source/output/
+RUN mkdir -p /workspace/output && mv ../*.deb /workspace/output/
 
 # List the build artifacts
-RUN ls /source/output
+RUN ls /workspace/output

@@ -26,7 +26,9 @@ jobs:
           buildpackage-opts: --build=binary --no-sign        
           # before-build-hook: debchange --controlmaint --local="+ci${{ github.run_id }}~git$(git rev-parse --short HEAD)" "CI build"
           extra-build-deps: devscripts git build-essential equivs debhelper
-          host-arch: amd64       
+          host-arch: amd64
+          artifacts-dir: debian/artifacts
+          setup-hook: mk-build-deps --install --tool 'fakeroot -u' --remove
 
       - name: Upload Debian Package
         uses: actions/upload-artifact@v2

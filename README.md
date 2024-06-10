@@ -39,7 +39,7 @@ sudo apt-get remove grub2-theme-hamonikr
 Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the GPL-3.0 license. See the LICENSE file for details.
 
 ## Contact
 For any issues or questions, please open an issue on GitHub or visit to us at hamonikr.org.

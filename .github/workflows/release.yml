@@ -28,11 +28,16 @@ jobs:
           extra-build-deps: devscripts git build-essential equivs debhelper
           host-arch: amd64       
 
+      - name: Move Debian Packages
+        run: |
+          mkdir -p artifacts
+          mv ../*.deb artifacts/
+
       - name: Upload Debian Package
         uses: actions/upload-artifact@v2
         with:
           name: debian-package
-          path: ../*.deb
+          path: artifacts/*.deb
 
   release:
     needs: build

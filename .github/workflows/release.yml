@@ -18,18 +18,15 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install build dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y devscripts equivs debhelper build-essential
-
       - name: Build Debian Package
         uses: jtdor/build-deb-action@v1
         env:
           DEB_BUILD_OPTIONS: noautodbgsym
         with:
-          buildpackage-opts: --build=binary --no-sign        
+          buildpackage-opts: --build=binary --no-sign
+          # When change deb package name as git rev id
           # before-build-hook: debchange --controlmaint --local="+ci${{ github.run_id }}~git$(git rev-parse --short HEAD)" "CI build"
+          before-build-hook: apt-get install -y devscripts equivs debhelper build-essential
           extra-build-deps: devscripts git 
           host-arch: amd64
           artifacts-dir: debian/artifacts

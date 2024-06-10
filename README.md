@@ -1,34 +1,45 @@
-# grub2-theme-kumkang
+# Grub2 Theme HamoniKR
+
+![hamonikr-hanla](https://img.shields.io/badge/hamonikr-hanla-green)
+![hamonikr-taebaek](https://img.shields.io/badge/hamonikr-taebaek-blue)
 ![hamonikr-kumkang](https://img.shields.io/badge/hamonikr-kumkang-purple)
 
-* HiDPI 환경의 grub 테마와 일반 테마 배포 
+HamoniKR Grub2 Theme is designed for HamoniKR OS, providing both HiDPI and standard resolution themes for Grub2 bootloader on Debian and Ubuntu based distributions.
 
+## Features
+ * HiDPI Support: Optimized for high-resolution displays.
+ * Standard Theme: Suitable for regular displays.
+ * Multiple Variants: Includes dark mode options for both HiDPI and standard resolutions.
 
-## Install
+## Installation
 
-### 하모니카 OS (>=5.0)
+### Prerequisites
+Make sure you have the necessary dependencies installed:
 
 ```
-sudo apt install grub2-theme-kumkang
-
-또는
-
-sudo apt install grub2-theme-kumkang-hd
-```
-### How to create grub font
-```
-sudo grub-mkfont --output=/boot/grub/fonts/NanumGothicCoding.pf2 --size=32 ~/.local/share/fonts/NanumGothicCoding.ttf
+sudo apt-get update
+sudo apt-get install grub2-common
 ```
 
-    ### How to convert png from icons-svg folder
-Use convert-svg-app (https://github.com/hamonikr/convert-svg)
+### Download and Install
+Download the latest .deb package from the releases page.
+Install the package using dpkg:
 ```
-convert-svg-app
+sudo dpkg -i grub2-theme-hamonikr*.deb
 ```
 
-# License
- * GPL v3
- 
+## Uninstallation
+To remove the theme, run:
 
- # 이슈 또는 버그
- 사용 중 문제를 발견하시면 root@hamonikr.org 또는 https://groups.google.com/forum/m/#!forum/hamonikr 에서 알려주세요.
+```
+sudo apt-get remove grub2-theme-hamonikr
+```
+
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+For any issues or questions, please open an issue on GitHub or visit to us at hamonikr.org.

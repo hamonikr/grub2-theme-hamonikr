@@ -24,24 +24,27 @@ jobs:
         run: docker build --file .docker/${{ matrix.dockerfile }} -t debian-package-builder .
 
       - name: Run Docker container and build
-        run: docker run --name debian-package-builder -v ${{ github.workspace }}:/workspace debian-package-builder
+        run: docker run --name debian-package-builder -v ${{ github.workspace }}/output:/workspace/output debian-package-builder
 
       - name: Archive build artifacts
-        id: artifact-upload-step
         uses: actions/upload-artifact@v4
         with:
           name: debian-package
-          path: /workspace/source/output/*.deb
+          path: output/*.deb
+          if-no-files-found: error
 
   release:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
           name: debian-package
-          path: ./debian-package
+          path: debian-package
 
       - run: ls -R ./debian-package
 

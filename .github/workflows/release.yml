@@ -18,6 +18,11 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y devscripts equivs debhelper build-essential
+
       - name: Build Debian Package
         uses: jtdor/build-deb-action@v1
         env:
@@ -25,7 +30,7 @@ jobs:
         with:
           buildpackage-opts: --build=binary --no-sign        
           # before-build-hook: debchange --controlmaint --local="+ci${{ github.run_id }}~git$(git rev-parse --short HEAD)" "CI build"
-          extra-build-deps: devscripts git build-essential equivs debhelper
+          extra-build-deps: devscripts git 
           host-arch: amd64
           artifacts-dir: debian/artifacts
           setup-hook: mk-build-deps --install --tool 'fakeroot -u' --remove

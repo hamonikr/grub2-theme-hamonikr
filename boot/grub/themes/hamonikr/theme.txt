@@ -3,7 +3,7 @@ desktop-image: "background.png"
 title-text: ""
 
 terminal-box: "terminal_box_*.png"
-terminal-font: "Terminus (TTF) Regular 16"
+terminal-font: "Terminus (TTF) Regular 24"
 terminal-left: "0"
 terminal-top: "0"
 terminal-width: "100%"
@@ -13,21 +13,21 @@ terminal-border: "0"
 + boot_menu {
   left = 25%
   width = 50%
-  top = 25%
-  height = 50%	
+  top = 20%
+  height = 55%	
 
-  item_font = "D2Coding Regular 16"
-  item_color = "#ffffff"
-  item_height = 64
+  item_font = "D2Coding Regular 24"
+  item_color = "#FFFFFF"
+  item_height = 44
   item_icon_space = 12 
   item_spacing = 4
 
-  selected_item_font = "D2Coding Regular 16"
-  selected_item_color= "#e67300"
+  selected_item_font = "D2Coding Regular 24"
+  selected_item_color= "#000000"
   selected_item_pixmap_style = "select_*.png"
 
-  icon_height = 52
-  icon_width = 52
+  icon_height = 32
+  icon_width = 32
 
   scrollbar = true
   scrollbar_width = 40
@@ -35,13 +35,13 @@ terminal-border: "0"
 }
 
 + vbox {
- left = 25%+64
- top = 81%
+ left = 25%+34
+ top = 75%
  width = 50%-64
- + label { text = "Controls" color = "#ffffff" font = "D2Coding Regular 16" }
- + label { text = "- 'E'를 누르면 선택한 메뉴를 편집합니다. " color = "#ffffff" font = "D2Coding Regular 16" }
- + label { text = "- 'C'를 누르면 GRUB 명령행에서 다양한 작업을 할 수 있습니다. " color = "#ffffff" font = "D2Coding Regular 16" }
- + label { text = "" color = "#ffffff" font = "D2Coding Regular 16" }
+ + label { text = "Controls" color = "#FFFFFF" font = "D2Coding Regular 24" }
+ + label { text = "- 'E'를 누르면 선택한 메뉴를 편집합니다. " color = "#FFFFFF" font = "D2Coding Regular 24" }
+ + label { text = "- 'C'를 누르면 GRUB 명령행에서 다양한 작업을 할 수 있습니다. " color = "#FFFFFF" font = "D2Coding Regular 24" }
+ + label { text = "" color = "#FFFFFF" font = "D2Coding Regular 24" }
  }
 + label {  
  left = 0% 
@@ -50,6 +50,6 @@ terminal-border: "0"
  align = "center"
  id = "__timeout__" 
  text = "Booting in %d seconds."
- color = "#ffffff"
- font = "D2Coding Regular 16"
+ color = "#FFFFFF"
+ font = "D2Coding Regular 24"
 }

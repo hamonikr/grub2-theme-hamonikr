@@ -46,9 +46,17 @@ jobs:
 
       - run: ls -R .
 
+      - name: Generate Release Notes
+        run: |
+          previous_tag=$(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=1 --before="HEAD"))
+          changelog=$(git log --pretty=format:"* %s" "$previous_tag"..HEAD)
+          echo "## Release Notes" > CHANGELOG.txt
+          echo "$changelog" >> CHANGELOG.txt
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           files: ./*.deb
+          body_path: ${{ github.workspace }}-CHANGELOG.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,3 +1,9 @@
+grub2-theme-hamonikr (1.0.1) stable; urgency=medium
+
+  * Update boot menu font and icon
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 14 Jun 2024 23:47:09 +0900
+
 grub2-theme-hamonikr (1.0.0) stable; urgency=medium
 
   * Release for paektu

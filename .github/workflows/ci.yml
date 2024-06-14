@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Build Debian Package
         uses: jtdor/build-deb-action@v1
@@ -46,6 +46,9 @@ jobs:
 
       - run: ls -R .
 
+      - name: Checkout source code
+        uses: actions/checkout@v4
+        
       - name: Generate Release Notes
         run: |
           previous_tag=$(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=1 --before="HEAD"))

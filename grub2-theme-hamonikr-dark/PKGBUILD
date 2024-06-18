@@ -1,21 +1,21 @@
 # Maintainer: Kevin Kim <root@hamonikr.org>
 
-pkgname=grub2-theme-hamonikr
+pkgname=grub2-theme-hamonikr-dark
 pkgver=1.0.0
 pkgrel=1
-pkgdesc="Grub2 Theme for HamoniKR"
+pkgdesc="Grub2 Theme for HamoniKR - Dark"
 arch=('any')
 url="https://github.com/hamonikr/grub2-theme-hamonikr"
 license=('GPL')
 depends=()
-replaces=('grub2-theme-hamonikr-dark')
+replaces=('grub2-theme-hamonikr')
 source=("git+https://github.com/hamonikr/grub2-theme-hamonikr.git#tag=v1.0.1")
 sha256sums=('SKIP')
 
 package() {
   cd "$srcdir/grub2-theme-hamonikr"
-  mkdir -p "$pkgdir/usr/share/grub/themes/hamonikr"
-  cp -r * "$pkgdir/usr/share/grub/themes/hamonikr/"
+  mkdir -p "$pkgdir/usr/share/grub/themes/hamonikr-dark"
+  cp -r boot/grub/themes/hamonikr-dark/* "$pkgdir/usr/share/grub/themes/hamonikr-dark/"
 }
 
 install=$pkgname.install

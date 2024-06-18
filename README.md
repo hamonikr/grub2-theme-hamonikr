@@ -11,7 +11,9 @@ HamoniKR Grub2 Theme is designed for HamoniKR OS, providing both HiDPI and stand
  * Standard Theme: Suitable for regular displays.
  * Multiple Variants: Includes dark mode options for both HiDPI and standard resolutions.
 
-## Installation
+# Installation
+
+## Ubuntu, Debian, LinuxMint...
 
 ### Prerequisites
 Make sure you have the necessary dependencies installed:
@@ -33,6 +35,31 @@ To remove the theme, run:
 
 ```
 sudo apt-get remove grub2-theme-hamonikr
+```
+
+## Arch Linux, Manjaro
+
+normal screen resolution
+
+```
+# Light version
+wget https://github.com/hamonikr/grub2-theme-hamonikr/releases/download/v1.0.1/grub2-theme-hamonikr-1.0.0-1-any.pkg.tar.zst
+sudo pacman -U ./grub2-theme-hamonikr-1.0.0-1-any.pkg.tar.zst
+
+# Dark version
+wget https://github.com/hamonikr/grub2-theme-hamonikr/releases/download/v1.0.1/grub2-theme-hamonikr-dark-1.0.0-1-any.pkg.tar.zst
+sudo pacman -U ./grub2-theme-hamonikr-dark-1.0.0-1-any.pkg.tar.zst
+```
+
+If your screen is HiDpi
+```
+# Light version
+wget https://github.com/hamonikr/grub2-theme-hamonikr/releases/download/v1.0.1/grub2-theme-hamonikr-hidpi-1.0.0-1-any.pkg.tar.zst
+sudo pacman -U ./grub2-theme-hamonikr-hidpi-1.0.0-1-any.pkg.tar.zst
+
+# Dark version
+wget https://github.com/hamonikr/grub2-theme-hamonikr/releases/download/v1.0.1/grub2-theme-hamonikr-hidpi-dark-1.0.0-1-any.pkg.tar.zst
+sudo pacman -U ./grub2-theme-hamonikr-hidpi-dark-1.0.0-1-any.pkg.tar.zst
 ```
 
 ## Contributing

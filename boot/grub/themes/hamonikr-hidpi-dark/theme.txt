@@ -23,7 +23,7 @@ terminal-border: "0"
   item_spacing = 4
 
   selected_item_font = "D2Coding Regular 32"
-  selected_item_color= "#e67300"
+  selected_item_color= "#DC143C"
   selected_item_pixmap_style = "select_*.png"
 
   icon_height = 52

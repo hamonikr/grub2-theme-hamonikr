@@ -16,13 +16,13 @@ terminal-border: "0"
   top = 20%
   height = 55%	
 
-  item_font = "D2Coding Regular 24"
+  item_font = "D2Coding Nerd Font Regular 20"
   item_color = "#FFFFFF"
   item_height = 44
   item_icon_space = 12 
   item_spacing = 4
 
-  selected_item_font = "D2Coding Regular 24"
+  selected_item_font = "D2Coding Nerd Font Regular 20"
   selected_item_color= "#FF6347"
   selected_item_pixmap_style = "select_*.png"
 
@@ -38,10 +38,10 @@ terminal-border: "0"
  left = 25%+34
  top = 75%
  width = 50%-64
- + label { text = "Controls" color = "#FFFFFF" font = "D2Coding Regular 24" }
- + label { text = "- 'E'를 누르면 선택한 메뉴를 편집합니다. " color = "#FFFFFF" font = "D2Coding Regular 24" }
- + label { text = "- 'C'를 누르면 GRUB 명령행에서 다양한 작업을 할 수 있습니다. " color = "#FFFFFF" font = "D2Coding Regular 24" }
- + label { text = "" color = "#FFFFFF" font = "D2Coding Regular 24" }
+ + label { text = "Controls" color = "#FFFFFF" font = "D2Coding Nerd Font Regular 20" }
+ + label { text = "- 'E'를 누르면 선택한 메뉴를 편집합니다. " color = "#FFFFFF" font = "D2Coding Nerd Font Regular 20" }
+ + label { text = "- 'C'를 누르면 GRUB 명령행에서 다양한 작업을 할 수 있습니다. " color = "#FFFFFF" font = "D2Coding Nerd Font Regular 20" }
+ + label { text = "" color = "#FFFFFF" font = "D2Coding Nerd Font Regular 20" }
  }
 + label {  
  left = 0% 
@@ -51,5 +51,5 @@ terminal-border: "0"
  id = "__timeout__" 
  text = "Booting in %d seconds."
  color = "#FFFFFF"
- font = "D2Coding Regular 24"
+ font = "D2Coding Nerd Font Regular 20"
 }

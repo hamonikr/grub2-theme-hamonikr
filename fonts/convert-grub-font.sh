@@ -16,6 +16,8 @@ if [ "$1" = "all" ] ; then
 		file ./output/${font%%.*}-16.pf2
 		grub-mkfont --output="./output/${font%%.*}-18.pf2" --size=18 "$font"
 		file ./output/${font%%.*}-18.pf2
+		grub-mkfont --output="./output/${font%%.*}-20.pf2" --size=20 "$font"
+		file ./output/${font%%.*}-20.pf2
 		grub-mkfont --output="./output/${font%%.*}-22.pf2" --size=22 "$font"
 		file ./output/${font%%.*}-22.pf2
 		grub-mkfont --output="./output/${font%%.*}-24.pf2" --size=24 "$font"

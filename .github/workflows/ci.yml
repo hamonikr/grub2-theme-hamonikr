@@ -22,6 +22,7 @@ jobs:
           buildpackage-opts: --build=binary --no-sign
           # When change deb package name as git rev id
           # before-build-hook: debchange --controlmaint --local="+ci${{ github.run_id }}~git$(git rev-parse --short HEAD)" "CI build"
+          before-build-hook: apt-get install -y devscripts equivs && mk-build-deps --install --remove debian/control
           extra-build-deps: devscripts git equivs debhelper build-essential
           host-arch: amd64
           artifacts-dir: debian/artifacts

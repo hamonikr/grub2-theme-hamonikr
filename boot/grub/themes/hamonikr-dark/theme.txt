@@ -16,14 +16,14 @@ terminal-border: "0"
   top = 20%
   height = 55%	
 
-  item_font = "D2Coding Nerd Font Regular 20"
+  item_font = "Pretendard Regular 18"
   item_color = "#ffffff"
   item_height = 44
   item_icon_space = 12 
   item_spacing = 4
 
-  selected_item_font = "D2Coding Nerd Font Regular 20"
-  selected_item_color= "#DC143C"
+  selected_item_font = "Monaco Regular 18"
+  selected_item_color= "#29B6F6"
   selected_item_pixmap_style = "select_*.png"
 
   icon_height = 32

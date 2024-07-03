@@ -23,7 +23,7 @@ terminal-border: "0"
   item_spacing = 4
 
   selected_item_font = "Monaco Regular 18"
-  selected_item_color= "#be7b50" 
+  selected_item_color= "#d3986e"
   selected_item_pixmap_style = "select_*.png"
 
   icon_height = 32

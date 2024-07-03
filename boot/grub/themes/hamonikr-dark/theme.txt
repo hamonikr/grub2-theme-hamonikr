@@ -3,7 +3,7 @@ desktop-image: "background.png"
 title-text: ""
 
 terminal-box: "terminal_box_*.png"
-terminal-font: "Terminus (TTF) Regular 24"
+terminal-font: "D2Coding Nerd Font Regular 20"
 terminal-left: "0"
 terminal-top: "0"
 terminal-width: "100%"
@@ -16,14 +16,14 @@ terminal-border: "0"
   top = 20%
   height = 55%	
 
-  item_font = "Pretendard Regular 18"
+  item_font = "Monaco Regular 18"
   item_color = "#ffffff"
   item_height = 44
   item_icon_space = 12 
   item_spacing = 4
 
   selected_item_font = "Monaco Regular 18"
-  selected_item_color= "#29B6F6"
+  selected_item_color= "#be7b50" 
   selected_item_pixmap_style = "select_*.png"
 
   icon_height = 32

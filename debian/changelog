@@ -1,3 +1,10 @@
+grub2-theme-hamonikr (1.0.6) paektu; urgency=medium
+
+  [Kevin Kim]
+  * Release for HamoniKR paektu
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 29 Jul 2024 15:18:59 +0900
+
 grub2-theme-hamonikr (1.0.5) stable; urgency=medium
 
   * Release for HamoniKR paektu

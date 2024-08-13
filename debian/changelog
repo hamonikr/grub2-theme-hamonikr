@@ -1,3 +1,10 @@
+grub2-theme-hamonikr (1.0.7) paektu; urgency=medium
+
+  [Kevin Kim]
+  * Fix wrong font path
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 13 Aug 2024 21:00:49 +0900
+
 grub2-theme-hamonikr (1.0.6) paektu; urgency=medium
 
   [Kevin Kim]
